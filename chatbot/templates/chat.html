@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Chat UI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .chat-container {
+            width: 100%;
+            max-width: 400px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chat-messages {
+            flex-grow: 1;
+            padding: 10px;
+            overflow-y: auto;
+        }
+
+        .message {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            max-width: 70%;
+            clear: both;
+        }
+
+        .message.system {
+            background-color: #e0e0e0;
+            text-align: left;
+            float: left;
+        }
+
+        .message.user {
+            background-color: #ff4d4d;
+            /* Cool red color */
+            color: white;
+            text-align: right;
+            float: right;
+        }
+
+        .input-container {
+            display: flex;
+            padding: 10px;
+            border-top: 1px solid #ccc;
+        }
+
+        textarea {
+            flex-grow: 1;
+            resize: none;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        button {
+            margin-left: 10px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Rohm Kundenservice</h1> <!-- Page title added here -->
+    <div class="chat-container">
+        <div class="chat-messages">
+            <div class="message system">Willkommen beim Rohm Kundenservice - wie kann ich dir heute behilflich sein?
+            </div>
+        </div>
+        <div class="input-container">
+            <textarea id="messageInput" rows="1" placeholder="Nachricht eingeben..."></textarea>
+            <button id="sendButton">Senden</button>
+        </div>
+    </div>
+
+    <script>
+        const sendButton = document.getElementById('sendButton');
+        const messageInput = document.getElementById('messageInput');
+        const chatMessages = document.querySelector('.chat-messages');
+
+        sendButton.addEventListener('click', async function () {
+            const message = messageInput.value.trim();
+            if (message) {
+                // Add user message to chat
+                const userMessage = document.createElement('div');
+                userMessage.classList.add('message', 'user');
+                userMessage.textContent = message;
+                chatMessages.appendChild(userMessage);
+
+                // Clear text area
+                messageInput.value = '';
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+
+
+                // die Nachricht an der Ai übersenden
+                const responseMessage = await getAiMessage(message)
+                const systemMessage = document.createElement('div');
+                systemMessage.classList.add('message', 'system');
+                systemMessage.textContent = responseMessage;
+                chatMessages.appendChild(systemMessage);
+
+            }
+        });
+
+
+        async function getAiMessage(prompt) {
+            const rawResponse = await fetch(`/api/chat`, {
+                method: "POST",
+                body: JSON.stringify({ prompt }),
+                headers: { "content-type": "application/json" }
+            })
+            const responseData = await rawResponse.json();
+
+            return responseData?.message
+        }
+    </script>
+</body>
+
+</html>

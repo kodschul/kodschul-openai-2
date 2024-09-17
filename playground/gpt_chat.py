@@ -1,6 +1,6 @@
 
 from openai import OpenAI
-from env import API_KEY
+from chatbot.env import API_KEY
 
 
 client = OpenAI(api_key=API_KEY)

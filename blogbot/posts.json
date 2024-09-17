@@ -1,0 +1,27 @@
+[
+  {
+    "slug": "the-journey-of-web-development",
+    "title": "The Journey of Web Development",
+    "image_url": "https://images.unsplash.com/photo-1720048169970-9c651cf17ccd?q=80&w=2028&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+
+    "author": "Jane Doe",
+    "publish_date": "2023-09-12",
+    "content": "<h2>Introduction</h2><p>Web development has come a long way in the past few decades. From simple static pages to complex dynamic applications, the evolution is remarkable.</p><h2>The Early Days</h2><p>In the early 90s, websites were basic HTML pages. They were simple and lacked interactivity. Developers relied on minimal styling and content.</p><h2>The Rise of JavaScript</h2><p>With the advent of JavaScript, developers could add interactivity to websites. This opened doors to more dynamic content and richer user experiences.</p><h2>Conclusion</h2><p>Today, web development continues to grow, with modern frameworks and tools making it easier to create robust applications. The future is bright for the web!</p>"
+  },
+  {
+    "slug": "the-future-of-artificial-intelligence",
+    "title": "The Future of Artificial Intelligence",
+    "image_url": "https://images.unsplash.com/photo-1720048169970-9c651cf17ccd?q=80&w=2028&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "author": "John Smith",
+    "publish_date": "2023-08-28",
+    "content": "<h2>Introduction</h2><p>Artificial Intelligence (AI) is rapidly transforming industries. From automation to predictive analytics, AI is reshaping how we work and live.</p><h2>Current Applications</h2><p>AI is already being used in various sectors like healthcare, finance, and customer service. It's enabling more efficient operations and personalized user experiences.</p><h2>Looking Ahead</h2><p>In the coming years, AI is expected to revolutionize even more industries, making processes smarter and more autonomous. However, ethical considerations and challenges remain.</p><h2>Conclusion</h2><p>The future of AI is exciting and full of potential, but it’s essential to guide its development responsibly.</p>"
+  },
+  {
+    "slug": "top-5-travel-destinations-in-2024",
+    "title": "Top 5 Travel Destinations in 2024",
+    "image_url": "https://images.unsplash.com/photo-1720048169970-9c651cf17ccd?q=80&w=2028&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "author": "Emily Green",
+    "publish_date": "2024-01-05",
+    "content": "<h2>Introduction</h2><p>If you’re looking for your next travel destination, 2024 brings exciting options for every type of traveler.</p><h2>1. Tokyo, Japan</h2><p>Known for its blend of traditional and modern attractions, Tokyo is a must-visit destination in 2024. Don’t miss the cherry blossom season!</p><h2>2. Santorini, Greece</h2><p>The stunning views, beautiful beaches, and rich history make Santorini one of the top spots for a relaxing and picturesque vacation.</p><h2>3. New York City, USA</h2><p>The city that never sleeps offers something for everyone, from world-class museums to Broadway shows and iconic landmarks like the Statue of Liberty.</p><h2>4. Cape Town, South Africa</h2><p>Cape Town is perfect for adventure lovers. Experience Table Mountain, beautiful coastlines, and vibrant local culture.</p><h2>5. Bali, Indonesia</h2><p>Bali continues to captivate visitors with its tropical beauty, yoga retreats, and serene landscapes.</p><h2>Conclusion</h2><p>Wherever you choose to go in 2024, these destinations promise memorable experiences. Start planning your trip now!</p>"
+  }
+]
